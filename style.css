@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&display=swap');
+BODY{
+cursor:url("cursor-16.ico"), auto;
+}
+  a {
+        cursor: url("cursor-16.ico"), url("cursor-16.ico"), default;
+    }
+/* CAN EDIT */
+:root {
+  /* background color of the page (only shows up if you don't use a background image */
+  --page-background: 
+#000000;
+
+  /* styles related to the card */
+  --card-background: #1000;
+  --card-outline: #6000;
+  --card-shadow: 0px 16px 32px rgba(2, 2, 3, 0.48);
+  --card-shadow-hover: 0px 16px 32px rgba(2, 2, 3, 0.64);
+  
+  /* styles related to text */
+  /* font family of text you can go to https://fonts.google.com/ to import a different font if you want */ 
+  --font-family: 'IBM Plex Sans', sans-serif;
+  --text-color: #ff0088;
+
+  /* styles related to buttons */
+  --button-primary-default: #2;
+  --button-primary-hover: #3C445C;
+  --button-primary-active: #445;
+  
+  --button-secondary-default: #2;
+  --button-secondary-hover: #3C445C;
+  --button-secondary-active: #4E5569;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+  
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--page-background);
+  background-image: url("wsohan.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: var(--font-family);
+  font-weight: 500;
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 20px;
+  text-align: center;
+}
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: #00FF00;
+  border-radius: 50%;
+  text-align: center;
+  display: inline-block;
+}
+
+p {
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;   
+}
+
+.card {
+  background: var(--card-background);
+  border: 9px solid var(--card-outline);
+  border-radius: 16px;
+  box-shadow: var(--card-shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
+  padding: 33px;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+  max-width: 9000px;
+}
+
+.card:hover {
+  transform: scale(0);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.card .top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.card .top .logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  border-radius: 70%;
+  border: 2px solid var(--button-primary-default);
+}
+
+.card .top .logo-wrapper img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.card .top .dnd {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  padding: 8px;
+  border-radius: 50%;
+  border: 4px solid var(--button-primary-default);
+}
+.card .top .text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.card .top .text h4 {
+  max-width: 352px;
+}
+
+.card .socials {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card .buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+}
+
+.card button {
+  background: var(--button-secondary-default);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  border: none;
+  border-radius: 40px;
+  padding: 12px;
+  font-size: 19px;
+  line-height: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 120ms ease-out;
+}
+.card button.icon {
+  background: transparent;
+  border-radius: 20%;
+  width: auto;
+}
+
+.card button.primary {
+  background: var(--button-primary-default);
+}
+
+.card button:hover {
+  background: var(--button-secondary-hover);
+}
+
+.card button.primary:hover {
+  background: var(--button-primary-hover);
+}
+
+.card button:active {
+  background: var(--button-secondary-active);
+}
+
+.card button.primary:active {
+  background: var(--button-primary-active);
+}
+
+
+@media only screen and (max-height: 4000px) {
+  .card {
+    transform: scale(0.8);
+  }
+
+  .card:hover {
+    transform: scale(0.85);
+  }
+}
+
+@media only screen and (max-width: 500000px) {
+  .card {
+    width: 80%;
+  }
+}
+.animated_rainbow_1 {
+	font-size: 35px;
+	font-family: Arial Black, Gadget, sans-serif;
+	background-image: -webkit-linear-gradient(left, #f00, #ff2b00, #f50, #ff8000, #fa0, #ffd500, #ff0, #d4ff00, #af0, #80ff00, #5f0, #2bff00, #0f0, #00ff2a, #0f5, #00ff80, #0fa, #00ffd5, #0ff, #00d5ff, #0af, #0080ff, #05f, #002aff, #00f, #2b00ff, #50f, #8000ff, #a0f, #d400ff, #f0f, #ff00d4, #f0a, #ff0080, #f05, #ff002b, #f00);
+	-webkit-animation: animatedBackground_a 5s linear infinite alternate;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: #0000;
+	background-clip: text;
+}
+
+@keyframes animatedBackground_a {
+	0% { background-position: 0 0 }
+	100% { background-position: -500px 0 }
+}
+}
+.animated_rainbow_2 {
+	font-size: 12px;
+	font-family: Arial Black, Gadget, sans-serif;
+	background-image: -webkit-linear-gradient(left, #f00, #ff2b00, #f50, #ff8000, #fa0, #ffd500, #ff0, #d4ff00, #af0, #80ff00, #5f0, #2bff00, #0f0, #00ff2a, #0f5, #00ff80, #0fa, #00ffd5, #0ff, #00d5ff, #0af, #0080ff, #05f, #002aff, #00f, #2b00ff, #50f, #8000ff, #a0f, #d400ff, #f0f, #ff00d4, #f0a, #ff0080, #f05, #ff002b, #f00);
+	-webkit-animation: animatedBackground_b 5s linear infinite alternate;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: #0000;
+	background-clip: text;
+}
+@keyframes animatedBackground_b {
+	0% { background-position: 0 0 }
+	100% { background-position: -500px 0 }
+}
+.hide {
+	font-size: 0.1px;
+  body {
+    opacity: 0;
+    transition: opacity 5s;
+}
